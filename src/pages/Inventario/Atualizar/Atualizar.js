@@ -11,12 +11,10 @@ import {
 import { Button } from "@rneui/themed";
 import { ApiService } from "../../../service/ApiService";
 
-
-
 export function AtualizarItem({ navigation, route }) {
   const api = new ApiService();
 
-  const [itemNome, setItemNome] = useState(""); 
+  const [itemNome, setItemNome] = useState("");
   const [itemQuantidade, setItemQuantidade] = useState("0");
   const [itemDescricao, setItemDescricao] = useState("");
 
@@ -33,7 +31,6 @@ export function AtualizarItem({ navigation, route }) {
 
   const onUpdateItem = async () => {
     if (itemNome.trim() === "") {
-     
       Alert.alert("Erro", "O campo Nome do item não pode estar vazio.");
       return;
     }
